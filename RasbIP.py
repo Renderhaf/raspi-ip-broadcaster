@@ -22,7 +22,15 @@ def Send(To,Content):
 
 def Single():
     clear()
-    To = input("Email? ")
+    with open('mail.config', 'r') as f:
+        mail = f.read()
+    if mail == "":
+        To = input("Email? ")
+        with open("mail.config","w") as f:
+            f.write(To)
+    else:
+        To = mail
+
     IP = os.popen("hostname -I").read()
     Content = str(IP)
     Send(To,Content)
