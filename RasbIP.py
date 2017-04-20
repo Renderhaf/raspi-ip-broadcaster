@@ -22,11 +22,13 @@ def Send(To,Content):
 
 def Single():
     clear()
-    with open('mail.config', 'r') as f:
+    path = os.path.abspath('./mail.config')
+    print(path)
+    with open(path, 'r') as f:
         mail = f.read()
     if mail == "":
         To = input("Email? ")
-        with open("mail.config","w") as f:
+        with open(path,"w") as f:
             f.write(To)
     else:
         To = mail
