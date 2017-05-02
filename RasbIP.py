@@ -22,8 +22,9 @@ def Send(To,Content):
 
 def Single():
     clear()
-    path = os.path.abspath('./mail.config')
-    print(path)
+    path2 = os.path.abspath("./mail.config")
+    path = "/home/pi/raspi-ip-broadcaster/mail.config"
+    print(path2)
     with open(path, 'r') as f:
         mail = f.read()
     if mail == "":
