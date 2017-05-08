@@ -11,3 +11,11 @@ And add This:
 
 python3 /home/pi/raspi-ip-broadcaster/RasbIP.py
 
+To change the Email configuration, do:
+
+```bash
+$ nano mail.config
+
+```
+
+the program only works with Gmail
